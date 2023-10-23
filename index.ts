@@ -1,10 +1,6 @@
-const { http } = require("@ampt/sdk");
-const { app } = require("./api/server");
+import "@ampt/nextjs/entrypoint";
+import { http } from "@ampt/sdk";
 
-try {
-  // @ts-ignore
-  import("@ampt/nextjs/entrypoint");
-  http.node.use("/api", app);
-} catch (err: any) {
-  console.error(err, "error initting app!");
-}
+import { app } from "./api/server";
+
+http.node.use("/api", app);
