@@ -13,11 +13,11 @@ const app: express.Application = express();
 app.use(express.json());
 
 app.use((req, _res, next) => {
-  console.info({
-    method: req.method,
-    url: req.url,
-    body: req.body,
-  });
+  // console.info({
+  //   method: req.method,
+  //   url: req.url,
+  //   body: req.body,
+  // });
   next();
 });
 

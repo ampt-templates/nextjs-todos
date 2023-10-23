@@ -39,8 +39,7 @@
   },
   "ampt": {
     "app": "nextjs-todos",
-    "runtime": "nodejs18",
-    "org": "rschick"
+    "runtime": "nodejs18"
   },
   "files": [
     "*"
