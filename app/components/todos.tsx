@@ -18,6 +18,10 @@ import { Helper } from "./helper";
 import { api } from "../api";
 import { useTodos } from "../hooks/useTodos";
 
+import relativeTime from "dayjs/plugin/relativeTime";
+
+dayjs.extend(relativeTime);
+
 type TodoItem = {
   id: string;
   name: string;
@@ -74,7 +78,7 @@ const TodoCard = ({
       <Divider />
       <CardFooter>
         <p className="text-sm text-gray-500">
-          Added on {dayjs(todo.created).format("MMMM D, YYYY")}
+          Added {dayjs(todo.created).fromNow()}
         </p>
       </CardFooter>
     </Card>
