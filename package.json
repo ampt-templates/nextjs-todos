@@ -9,7 +9,8 @@
     "ampt:build": "ampt-next build",
     "ampt:dev": "PORT=4242 next dev",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "gitpod:ampt": "./node_modules/.bin/ampt"
   },
   "dependencies": {
     "@ampt/data": "^1.0.5",
@@ -38,10 +39,7 @@
     "typescript": "^5"
   },
   "ampt": {
-    "app": "nextjs-todos",
-    "runtime": "nodejs18"
-  },
-  "files": [
-    "*"
-  ]
+    "app": "",
+    "org": ""
+  }
 }
